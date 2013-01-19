@@ -5,6 +5,7 @@ manages various systems related to the Game Character System.
 @author: carl
 '''
 from HealthModule import HealthSystem
+from StrengthModule import StrengthSystem
 
 class Character:
     '''

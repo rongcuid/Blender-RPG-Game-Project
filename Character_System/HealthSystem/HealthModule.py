@@ -69,5 +69,7 @@ class HealthSystem:
         # the difference between MaxAfterRecovery - current solid HP
         if self.currentDynHP > MaxAfterRecovery:
             self.currentDynHP = MaxAfterRecovery - self.currentHP
+            
+    #TODO: Critical points
         
         
