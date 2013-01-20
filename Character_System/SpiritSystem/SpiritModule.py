@@ -1,16 +1,18 @@
 '''
 Created on Jan 20, 2013
 
+SpiritSystem class is the Spirit System. This system records the
+MP of character. When MP decreases, certain types of 
+operations will be affected. Also, the remaining MP when
+died will affect type of spirit of character, which 
+directly affects the ranking of ending.
+
 @author: carl
 '''
 
 class SpiritSystem():
     '''
-    This class is the Spirit System. This system records the
-    MP of character. When MP decreases, certain types of 
-    operations will be affected. Also, the remaining MP when
-    died will affect type of spirit of character, which 
-    directly affects the ranking of ending.
+    Spirit system(MP) class
     '''
 
 

@@ -1,7 +1,12 @@
 '''
-This file is the module for characters. It manages characters which
-manages various systems related to the Game Character System.
-
+Character class is for characters a rpg game will use. It 
+includes an elaborate system of health point(HP), strength
+point(SP), spiritual point(MP), and weapon system (WP). The
+tyoes included are game points, eg. health point; multiplication
+points, eg. attack multiplication point; status, eg. death flag;
+operation, eg. attack. This class links to other classes
+including Health Point Module, Strenth Point Module, Weapons 
+Module, and Spiritual Point Module.
 @author: carl
 '''
 from HealthModule import HealthSystem
@@ -11,14 +16,7 @@ from WeaponModule import WeaponSystem
 
 class Character:
     '''
-    This class is for characters a rpg game will use. It 
-    includes an elaborate system of health point(HP), strength
-    point(SP), spiritual point(MP), and weapon system (WP). The
-    tyoes included are game points, eg. health point; multiplication
-    points, eg. attack multiplication point; status, eg. death flag;
-    operation, eg. attack. This class links to other classes
-    including Health Point Module, Strenth Point Module, Weapons 
-    Module, and Spiritual Point Module.
+    The meta class for character managing
     '''
 
 
