@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?eclipse-pydev version="1.0"?><pydev_project>
+<pydev_property name="org.python.pydev.PYTHON_PROJECT_INTERPRETER">python 3.2</pydev_property>
+<pydev_property name="org.python.pydev.PYTHON_PROJECT_VERSION">python 3.0</pydev_property>
+<pydev_pathproperty name="org.python.pydev.PROJECT_SOURCE_PATH">
+<path>/Blender-RPG-Game-Project/Character_System</path>
+<path>/Blender-RPG-Game-Project</path>
+<path>/Blender-RPG-Game-Project/Character_System/HealthSystem</path>
+<path>/Blender-RPG-Game-Project/Character_System/StrengthSystem</path>
+<path>/Blender-RPG-Game-Project/Character_System/SpiritSystem</path>
+</pydev_pathproperty>
+</pydev_project>

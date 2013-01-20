@@ -6,6 +6,7 @@ manages various systems related to the Game Character System.
 '''
 from HealthModule import HealthSystem
 from StrengthModule import StrengthSystem
+from SpiritModule import SpiritSystem
 
 class Character:
     '''

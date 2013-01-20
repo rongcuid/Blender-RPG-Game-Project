@@ -20,6 +20,7 @@ class StrengthSystem():
         Constructor: Creates a new strength system.
         @param MaxSP: Maximum strength point
         '''
+        self.Maximum = MaxSP
     
     #TODO: weaken
     #TODO: recover
