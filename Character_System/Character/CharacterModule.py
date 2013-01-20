@@ -56,3 +56,4 @@ class Character:
         self.alive = True
         ## Defending status
         self.defending = True
+# TODO: Character refresh module. Use timestamp + loop to auto decrease/increase
