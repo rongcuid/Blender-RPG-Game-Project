@@ -10,6 +10,9 @@ directly affects the ranking of ending.
 @author: carl
 '''
 
+# Import constants
+from MPSystemConstants import *
+
 class SpiritSystem():
     '''
     Spirit system(MP) class
