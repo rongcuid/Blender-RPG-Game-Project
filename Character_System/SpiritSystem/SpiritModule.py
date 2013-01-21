@@ -26,8 +26,8 @@ class SpiritSystem():
         '''
         # Set maximum MP
         self.Maximum = int(MaxMP)
-        # Initialize current MP
-        self.currentMP = self.Maximum
+        # Initialize current MP, also add type cast
+        self.currentMP = float(self.Maximum)
 
     def get(self):
         '''Returns current MP'''
@@ -47,9 +47,9 @@ class SpiritSystem():
         Increase MP by recovery up to a certain limit.
         @param recovery: Amount of recovery
         '''
-        # TODO: Constant for recovery
-        # Maximum amount of recovery is 80% of total damage
-        MaxAfterRecovery = (0.8 * (self.Maximum - self.currentMP) 
+        # Maximum amount of recovery
+        MaxAfterRecovery = (MP_RECOVERY_RATIO * 
+                            (self.Maximum - self.currentMP) 
                             + self.currentMP)
         self.currentMP += recovery
         # If current MP larger than maximum, set to maximum.
