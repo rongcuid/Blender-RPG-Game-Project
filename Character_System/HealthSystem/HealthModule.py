@@ -61,6 +61,7 @@ class HealthSystem:
         '''
         Increase dynamic HP by recovery which is pre-calculated.
         ''' 
+        #TODO: Constant for recovery
         # Maximum HP after recovery, which is
         # current solid HP + 80% of total solid HP damage
         MaxAfterRecovery = (self.currentHP + 
