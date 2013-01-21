@@ -12,7 +12,7 @@ class ItemSystem():
     '''
     Class for items
     '''
-
+    NameList = {'SN':'Name'}
 
     def __init__(self, name, SN, Atk, Def):
         '''
@@ -29,6 +29,8 @@ class ItemSystem():
         self.Attack = int(Atk)
         # Initialize defense
         self.Defense = int(Def)
+        # TODO: Initialize SN/Name Dict
+        #ItemSystem.NameList += {SN:self.name}
     def __str__(self):
         '''
         Prints item name
