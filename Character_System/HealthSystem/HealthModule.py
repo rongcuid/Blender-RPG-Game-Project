@@ -27,10 +27,10 @@ class HealthSystem:
         '''
         # Initialize maximum HP
         self.Maximum = int(MaxHP)
-        # Initialize current HP
-        self.currentHP = MaxHP
-        # Initialize dynamic HP
-        self.currentDynHP = 0
+        # Initialize current HP, with type cast
+        self.currentHP = float(MaxHP)
+        # Initialize dynamic HP, float type
+        self.currentDynHP = 0.0
         
     def get(self):
         '''
