@@ -71,6 +71,5 @@ class HealthSystem:
         if self.currentDynHP > MaxAfterRecovery:
             self.currentDynHP = MaxAfterRecovery - self.currentHP
             
-    #TODO: Critical points
         
         
