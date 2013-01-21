@@ -14,7 +14,7 @@ class SpiritSystem():
     '''
     Spirit system(MP) class
     '''
-
+# TODO: constants
 
     def __init__(self, MaxMP):
         '''
@@ -25,11 +25,11 @@ class SpiritSystem():
         self.Maximum = int(MaxMP)
         # Initialize current MP
         self.currentMP = self.Maximum
-    #TODO: get
+
     def get(self):
         '''Returns current MP'''
         return self.currentMP
-    #TODO: hurt
+
     def hurt(self, damage):
         '''
         Decreases MP by damage, returns if still alive
@@ -38,7 +38,19 @@ class SpiritSystem():
         '''
         self.currentMP -= damage
         return self.currentMP > 0
-    #TODO: decrease rates
-    #TODO: recover
-    #TODO: critical points
+    
+    def recover(self, recovery):
+        '''
+        Increase MP by recovery up to a certain limit.
+        @param recovery: Amount of recovery
+        '''
+        # TODO: Constant for recovery
+        # Maximum amount of recovery is 80% of total damage
+        MaxAfterRecovery = (0.8 * (self.Maximum - self.currentMP) 
+                            + self.currentMP)
+        self.currentMP += recovery
+        # If current MP larger than maximum, set to maximum.
+        if self.currentMP > MaxAfterRecovery:
+            self.currentMP = MaxAfterRecovery
+
     
