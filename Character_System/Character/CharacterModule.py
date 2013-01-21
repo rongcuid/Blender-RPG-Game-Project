@@ -55,3 +55,4 @@ class Character:
         ## Defending status
         self.defending = True
 # TODO: Character refresh module. Use timestamp + loop to auto decrease/increase
+    # TODO: read attack and defense
