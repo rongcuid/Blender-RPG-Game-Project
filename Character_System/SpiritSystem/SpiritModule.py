@@ -17,8 +17,6 @@ class SpiritSystem():
     '''
     Spirit system(MP) class
     '''
-# TODO: constants
-
     def __init__(self, MaxMP):
         '''
         Constructor: Creates a new MP system.
