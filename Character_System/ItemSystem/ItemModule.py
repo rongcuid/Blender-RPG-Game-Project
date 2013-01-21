@@ -13,10 +13,12 @@ class ItemSystem():
     Class for items
     '''
     NameList = {'SN':'Name'}
+    SNList = {'Name':'SN'}
 
     def __init__(self, name, SN, Atk, Def):
         '''
         Creates a new item
+        @param name: Item name
         @param SN: Serial number
         @param Atk: Item attack
         @param Def: Item defense
@@ -29,8 +31,10 @@ class ItemSystem():
         self.Attack = int(Atk)
         # Initialize defense
         self.Defense = int(Def)
-        # TODO: Initialize SN/Name Dict
-        #ItemSystem.NameList += {SN:self.name}
+        # Initialize SN/Name Dict
+        ItemSystem.NameList[SN] = self.name
+        # Initialize Name/SN Dict
+        ItemSystem.SNList[name] = self.SN
     def __str__(self):
         '''
         Prints item name
