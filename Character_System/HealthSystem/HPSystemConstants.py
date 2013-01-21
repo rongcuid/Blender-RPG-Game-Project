@@ -30,3 +30,6 @@ HP_DECREASE_RATE = 2.0
 HP_DECREASE_RATE_2 = 20.0
 
 # ---End---: Change rates
+
+# Max ratio of HP recover
+HP_RECOVERY_RATIO = 0.8
