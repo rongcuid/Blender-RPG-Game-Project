@@ -39,6 +39,8 @@ class Character:
         HP = int(HP)
         SP = float(SP)
         MP = int(MP)
+        baseAtk = int(baseAtk)
+        baseDef = int(baseDef)
         # Set name
         self.name = name
         # Initialize health system
@@ -49,10 +51,24 @@ class Character:
         self.spirit = SpiritSystem(MP)
         # Initialize strength system
         self.strength = StrengthSystem(SP)
+        # Initialize base attack
+        self.baseAttack = baseAtk
+        # Initialize base defense
+        self.baseDefense = baseDef
+        
         # Initialize status flags
         ## Alive status
         self.alive = True
         ## Defending status
-        self.defending = True
-# TODO: Character refresh module. Use timestamp + loop to auto decrease/increase
-    # TODO: read attack and defense
+        self.defending = False
+    # TODO: Character refresh module. Use timestamp + loop to auto decrease/increase
+    def getBaseAttack(self):
+        '''
+        Returns base attack
+        '''
+        return self.baseAttack
+    def getbaseDefense(self):
+        '''
+        Returns base defense
+        '''
+        return self.baseDefense
