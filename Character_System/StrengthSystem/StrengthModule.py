@@ -25,9 +25,9 @@ class StrengthSystem():
         # Initialize Max SP with cast
         self.Maximum = float(MaxSP)
         # Initialize current max SP
-        self.currentMax = Maximum
+        self.currentMax = self.Maximum
         # Initialize current SP
-        self.currentSP = Maximum
+        self.currentSP = self.Maximum
         # Initialize action multiplier
         self.actMulti = 1.0
     
@@ -42,6 +42,12 @@ class StrengthSystem():
         Get current max SP
         '''
         return self.currentMax
+    
+    def getActMulti(self):
+        '''
+        Gets action multiplier. If current max > max, return 1.0
+        '''
+        return self.actMulti
     
     def weaken(self, damage):
         '''
@@ -64,12 +70,26 @@ class StrengthSystem():
         Set current Max to newMax.
         '''
         self.currentMax = newMax
+        self.currentSP = self.currentMax
     
-    def getActMulti(self):
+
+    def setActMulti(self, newActMulti):
         '''
-        Gets action multiplier. If current max > max, return 1.0
+        Sets action multiplier to newActMulti
+        '''
+        self.actMulti = newActMulti
+        
+    def autoSetActMulti(self):
+        '''
+        Automatically sets action multiplier
         '''
         if self.currentMax < self.Maximum:
-            return self.currentMax / self.Maximum
+            self.setActMulti(self.currentMax / self.Maximum)
         else:
-            return 1.0
+            self.setActMulti(1.0)
+    def autoSetMax(self, curHP, maxHP):
+        '''
+        Auto set maximum by current and max HP
+        '''
+        self.setMax(float(curHP) / float(maxHP) * self.Maximum)
+        
