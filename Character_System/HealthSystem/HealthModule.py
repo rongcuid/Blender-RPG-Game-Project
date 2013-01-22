@@ -27,12 +27,12 @@ class HealthSystem:
         '''
         # Initialize maximum HP
         self.Maximum = int(MaxHP)
-        # Initialize current HP
-        self.currentHP = MaxHP
-        # Initialize dynamic HP
-        self.currentDynHP = 0
+        # Initialize current HP, with type cast
+        self.currentHP = float(MaxHP)
+        # Initialize dynamic HP, float type
+        self.currentDynHP = 0.0
         
-    def get(self):
+    def getHP(self):
         '''
         Returns current solid HP
         '''
@@ -43,6 +43,12 @@ class HealthSystem:
         Returns current dynamic HP
         '''
         return self.currentDynHP
+    
+    def getMax(self):
+        '''
+        Returns max HP
+        '''
+        return self.Maximum
     
     def hurt(self, damage):
         '''
@@ -64,13 +70,17 @@ class HealthSystem:
         # Maximum HP after recovery, which is
         # current solid HP + 80% of total solid HP damage
         MaxAfterRecovery = (self.currentHP + 
-                            (self.Maximum - self.currentHP) * 0.8)
+                            (self.Maximum - self.currentHP) * HP_RECOVERY_RATIO)
         self.currentDynHP += recovery
         # If recovery is more than allowed, dynamic HP is set to
         # the difference between MaxAfterRecovery - current solid HP
         if self.currentDynHP > MaxAfterRecovery:
             self.currentDynHP = MaxAfterRecovery - self.currentHP
-            
-    #TODO: Critical points
+    
+    def alive(self):
+        '''
+        If alive, return true
+        '''
+        return self.currentHP > 0
         
         

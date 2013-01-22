@@ -22,8 +22,8 @@ class WeaponSystem():
         Constructor: Create a new weapon system.
         '''
     
-    #TODO: Read attack
-    #TODO: Read defence
-    #TODO: Op: Attack
-    #TODO: Op: Defend
+    # TODO: Read attack from item system
+    # TODO: Read defense from target
+    # TODO: Op: Attack
+    # TODO: Op: Defend
     
