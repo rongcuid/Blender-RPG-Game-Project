@@ -32,7 +32,7 @@ class HealthSystem:
         # Initialize dynamic HP, float type
         self.currentDynHP = 0.0
         
-    def get(self):
+    def getHP(self):
         '''
         Returns current solid HP
         '''
@@ -43,6 +43,12 @@ class HealthSystem:
         Returns current dynamic HP
         '''
         return self.currentDynHP
+    
+    def getMax(self):
+        '''
+        Returns max HP
+        '''
+        return self.Maximum
     
     def hurt(self, damage):
         '''
@@ -70,6 +76,11 @@ class HealthSystem:
         # the difference between MaxAfterRecovery - current solid HP
         if self.currentDynHP > MaxAfterRecovery:
             self.currentDynHP = MaxAfterRecovery - self.currentHP
-            
+    
+    def alive(self):
+        '''
+        If alive, return true
+        '''
+        return self.currentHP > 0
         
         
