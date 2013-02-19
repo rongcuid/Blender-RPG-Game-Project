@@ -13,6 +13,7 @@ Module, and Spiritual Point Module.
 from HealthSystem.HealthModule import HealthSystemClass
 from StrengthSystem.StrengthModule import StrengthSystemClass
 from SpiritSystem.SpiritModule import SpiritSystemClass
+from StorageSystem.StorageModule import StorageSystemClass
 from ItemSystem.ItemModule import ItemSystemClass
 
 class Character:
@@ -55,6 +56,7 @@ class Character:
         # Initialize strength system
         self.strength = StrengthSystemClass(SP)
         # TODO: Storage system for item storage
+        self.storage = StorageSystemClass()
         # Initialize base attack
         self.baseAttack = baseAtk
         # Initialize base defense

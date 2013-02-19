@@ -11,8 +11,8 @@ class ItemSystemClass():
     '''
     Class for items
     '''
-    NameList = None
-    SNList = None
+    NameList = {None:None}
+    SNList = {None:None}
 
     def __init__(self, name, SN, Atk, Def):
         '''
