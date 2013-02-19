@@ -16,7 +16,7 @@ at rate 1; below 3 health drops at rate 2.
 
 from HPSystemConstants import *
 
-class HealthSystem:
+class HealthSystemClass:
     '''Health System main class'''
     
 

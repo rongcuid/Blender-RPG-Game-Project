@@ -1,20 +1,18 @@
 '''
 Created on Jan 21, 2013
 
-This file contains ItemSystem class which records serial number
+This file contains ItemSystemClass class which records serial number
 of an item which is used for development of plot. Item also has 
 its name, attack point and defend point.
 
 @author: carl
 '''
-
-class ItemSystem():
+class ItemSystemClass():
     '''
     Class for items
     '''
-    NameList = {'SN':'Name'}
-    SNList = {'Name':'SN'}
-    ItemList = {'SN':'Item'}
+    NameList = None
+    SNList = None
 
     def __init__(self, name, SN, Atk, Def):
         '''
@@ -33,11 +31,11 @@ class ItemSystem():
         # Initialize defense
         self.Defense = int(Def)
         # Initialize SN/Name Dict
-        ItemSystem.NameList[SN] = self.name
+        ItemSystemClass.NameList[SN] = self.name
         # Initialize Name/SN Dict
-        ItemSystem.SNList[name] = self.SN
+        ItemSystemClass.SNList[name] = self.SN
         # Register to SN/Item List
-        ItemSystem.ItemList[SN] = self
+        ItemSystemClass.ItemList[SN] = self
     def __str__(self):
         '''
         Prints item name

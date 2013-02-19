@@ -9,19 +9,22 @@ including Health Point Module, Strenth Point Module, Weapons
 Module, and Spiritual Point Module.
 @author: carl
 '''
-from HealthModule import HealthSystem
-from StrengthModule import StrengthSystem
-from SpiritModule import SpiritSystem
-from ItemModule import ItemSystem
-from WeaponModule import WeaponSystem
+
+from HealthSystem.HealthModule import HealthSystemClass
+from StrengthSystem.StrengthModule import StrengthSystemClass
+from SpiritSystem.SpiritModule import SpiritSystemClass
+from ItemSystem.ItemModule import ItemSystemClass
 
 class Character:
     '''
     The meta class for character managing
     '''
+    # List of characters using SN
+    CharacterList = None
+    # List of character SNs using Name
+    SNList = None
 
-
-    def __init__(self, name, HP, SP, MP, baseAtk, 
+    def __init__(self, name, SN, HP, SP, MP, baseAtk, 
                  baseDef, atkMulti, defMulti):
         '''
         Constructor, creates a character.
@@ -36,6 +39,7 @@ class Character:
         weapon.
         ''' 
         # TODO: Add operation object and list
+        # TODO: Register to Character list
         # Convert type
         HP = int(HP)
         SP = float(SP)
@@ -45,17 +49,20 @@ class Character:
         # Set name
         self.name = name
         # Initialize health system
-        self.health = HealthSystem(HP)
-        # Initialize weapon system
-        self.weapons = WeaponSystem(atkMulti, defMulti)
+        self.health = HealthSystemClass(HP)
         # Initialize spirit system
-        self.spirit = SpiritSystem(MP)
+        self.spirit = SpiritSystemClass(MP)
         # Initialize strength system
-        self.strength = StrengthSystem(SP)
+        self.strength = StrengthSystemClass(SP)
+        # TODO: Storage system for item storage
         # Initialize base attack
         self.baseAttack = baseAtk
         # Initialize base defense
         self.baseDefense = baseDef
+        # Initialize attack multiplier
+        self.attackMulti = atkMulti
+        # Initialize defense multiplier
+        self.defenseMulti = defMulti
         
         # Initialize status flags
         ## Alive status
@@ -73,3 +80,18 @@ class Character:
         Returns base defense
         '''
         return self.baseDefense
+    def getAttackMulti(self):
+        '''
+        Returns attack multiplier.
+        '''
+        return self.attackMulti
+    def getDefenseMulti(self):
+        '''
+        Returns defense multiplier
+        '''
+        return self.defenseMulti
+    def isDefending(self):
+        '''
+        If defending, return true
+        '''
+        return self.defending

@@ -1,7 +1,7 @@
 '''
 Created on Jan 20, 2013
 
-SpiritSystem class is the Spirit System. This system records the
+SpiritSystemClassClass class is the Spirit System. This system records the
 MP of character. When MP decreases, certain types of 
 operations will be affected. Also, the remaining MP when
 died will affect type of spirit of character, which 
@@ -13,7 +13,7 @@ directly affects the ranking of ending.
 # Import constants
 from MPSystemConstants import *
 
-class SpiritSystem():
+class SpiritSystemClass():
     '''
     Spirit system(MP) class
     '''
