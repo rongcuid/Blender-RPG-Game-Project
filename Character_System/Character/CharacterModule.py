@@ -39,7 +39,6 @@ class Character:
         @param defMulti: Multiplication of defense of a particular
         weapon.
         ''' 
-        # TODO: Add operation object and list
         # TODO: Register to Character list
         # Convert type
         HP = int(HP)
