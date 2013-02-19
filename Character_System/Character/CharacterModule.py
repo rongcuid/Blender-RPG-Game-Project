@@ -12,6 +12,7 @@ Module, and Spiritual Point Module.
 from HealthModule import HealthSystem
 from StrengthModule import StrengthSystem
 from SpiritModule import SpiritSystem
+from ItemModule import ItemSystem
 from WeaponModule import WeaponSystem
 
 class Character:

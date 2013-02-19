@@ -14,6 +14,7 @@ class ItemSystem():
     '''
     NameList = {'SN':'Name'}
     SNList = {'Name':'SN'}
+    ItemList = {'SN':'Item'}
 
     def __init__(self, name, SN, Atk, Def):
         '''
@@ -35,6 +36,8 @@ class ItemSystem():
         ItemSystem.NameList[SN] = self.name
         # Initialize Name/SN Dict
         ItemSystem.SNList[name] = self.SN
+        # Register to SN/Item List
+        ItemSystem.ItemList[SN] = self
     def __str__(self):
         '''
         Prints item name
