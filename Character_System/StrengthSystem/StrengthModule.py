@@ -11,7 +11,7 @@ and defense
 @author: carl
 '''
 
-class StrengthSystem():
+class StrengthSystemClass():
     '''
 
     '''
@@ -43,7 +43,7 @@ class StrengthSystem():
         '''
         return self.currentMax
     
-    def getActMulti(self):
+    def getActionMulti(self):
         '''
         Gets action multiplier. If current max > max, return 1.0
         '''
@@ -73,18 +73,18 @@ class StrengthSystem():
         self.currentSP = self.currentMax
     
 
-    def setActMulti(self, newActMulti):
+    def setActionMulti(self, newActMulti):
         '''
         Sets action multiplier to newActMulti
         '''
         self.actMulti = newActMulti
         
-    def autoSetActMulti(self):
+    def autoSetActionMulti(self):
         '''
         Automatically sets action multiplier
         '''
         if self.currentMax < self.Maximum:
-            self.setActMulti(self.currentMax / self.Maximum)
+            self.setActionMulti(self.currentMax / self.Maximum)
         else:
             self.setActMulti(1.0)
     def autoSetMax(self, curHP, maxHP):
