@@ -1,7 +1,7 @@
 '''
 Created on Jan 19, 2013
 
-HealthSystem class is the health point calculation system. It includes
+HealthSystemClass class is the health point calculation system. It includes
 maximum health for each character, the solid and dynamic HP(Solid
 HP does not change if it is higher than critical point 2 and lower than 
 critical point 1, but 
@@ -14,9 +14,9 @@ at rate 1; below 3 health drops at rate 2.
 @author: carl
 '''
 
-from HPSystemConstants import *
+from HealthSystem.HPSystemConstants import *
 
-class HealthSystem:
+class HealthSystemClass:
     '''Health System main class'''
     
 
@@ -30,7 +30,7 @@ class HealthSystem:
         # Initialize current HP, with type cast
         self.currentHP = float(MaxHP)
         # Initialize dynamic HP, float type
-        self.currentDynHP = 0.0
+        self.currentDynHP = float(0.0)
         
     def getHP(self):
         '''

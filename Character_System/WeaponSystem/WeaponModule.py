@@ -3,15 +3,21 @@ Created on Jan 20, 2013
 
 WeaponSystem class is the weapon system. Its main function is to 
 attack and defend, NOT storing weapons information, which
-is done by item system. What this class does is to read 
-attack of item, multiply it by attack multiplier, add to 
-base attack, and multiply by action strength multiplier.
-Same as defending.
+is done by item system. It also does NOT do operations which are
+done by operation system.
+
+Attack is calculated by reading attack of item, multiply it by 
+attack multiplier, add to base attack, and multiply by action 
+strength multiplier.
+
+Defense is also calculated to be used in attack function. Defense
+is item defense times defense multiplier AND action multiplier, 
+and add with base defense.
 
 @author: carl
 '''
 
-class WeaponSystem():
+class WeaponSystemClass():
     '''
     Weapon system class
     '''
@@ -21,9 +27,30 @@ class WeaponSystem():
         '''
         Constructor: Create a new weapon system.
         '''
-    
-    # TODO: Read attack from item system
-    # TODO: Read defense from target
-    # TODO: Op: Attack
-    # TODO: Op: Defend
-    
+    # An effective attack is an attack that hits its enemy
+    @classmethod
+    def effectiveAttackHurt(cls, baseAtk, itemAtk, atkMulti, actMulti, tgtDef):
+        '''
+        An effective attack that hurts.
+        @param baseAtk: Base attack of a character.
+        @param itemAtk: Base attack of an item.
+        @param atkMulti: Attack multiplier of a character.
+        @param actMulti: Action strength multiplier of a character.
+        @param tgtDef: Target defense
+        @return: Calculated hurt.
+        '''
+        # hurt = (((itemAtk * atkMulti) + baseAtk) * actMulti) - tgtDef
+        return (((itemAtk * atkMulti) + baseAtk) * actMulti) - tgtDef
+    # An effective defend is a defend that blocks an attack.
+    @classmethod
+    def effectiveDefense(cls, baseDef, itemDef, defMulti, actMulti):
+        '''
+        An effective defend that blocks
+        @param baseDef: Base defense of a character.
+        @param itemDef: Base defense of an item.
+        @param defMulti: Defend multiplier of a character.
+        @param actMulti: Action strength multiplier of a character.
+        @return: Calculated defense
+        '''
+        # defense = ((itemDef * defMulti * actMulti) + baseDef)
+        return ((itemDef * defMulti * actMulti) + baseDef)
