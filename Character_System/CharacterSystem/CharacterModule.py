@@ -80,7 +80,7 @@ class Character:
         Returns base attack
         '''
         return self.baseAttack
-    def getbaseDefense(self):
+    def getBaseDefense(self):
         '''
         Returns base defense
         '''
@@ -100,3 +100,18 @@ class Character:
         If defending, return true
         '''
         return self.defending
+    def __str__(self):
+        '''
+        Returns name of character
+        @return: Name
+        '''
+        return self.name
+    
+    @classmethod
+    def retrieveCharacter(cls, SN):
+        '''
+        Retrieve character with SN
+        @param SN: Serial number
+        @return: The Character
+        '''
+        return cls.CharacterList[SN]

@@ -28,7 +28,8 @@ class WeaponSystemClass():
         Constructor: Create a new weapon system.
         '''
     # An effective attack is an attack that hits its enemy
-    def effectiveAttackHurt(self, baseAtk, itemAtk, atkMulti, actMulti, tgtDef):
+    @classmethod
+    def effectiveAttackHurt(cls, baseAtk, itemAtk, atkMulti, actMulti, tgtDef):
         '''
         An effective attack that hurts.
         @param baseAtk: Base attack of a character.
@@ -41,7 +42,8 @@ class WeaponSystemClass():
         # hurt = (((itemAtk * atkMulti) + baseAtk) * actMulti) - tgtDef
         return (((itemAtk * atkMulti) + baseAtk) * actMulti) - tgtDef
     # An effective defend is a defend that blocks an attack.
-    def effectiveDefense(self, baseDef, itemDef, defMulti, actMulti):
+    @classmethod
+    def effectiveDefense(cls, baseDef, itemDef, defMulti, actMulti):
         '''
         An effective defend that blocks
         @param baseDef: Base defense of a character.
