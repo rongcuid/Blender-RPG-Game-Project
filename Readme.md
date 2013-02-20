@@ -6,3 +6,5 @@ patient.
 Plan to: Use blender to make models; use Ogre as graphics engine;
 use bullet as physics engine. Use Python for core game system. 
 Once tested, will use RSA to encrypt game data.
+
+
