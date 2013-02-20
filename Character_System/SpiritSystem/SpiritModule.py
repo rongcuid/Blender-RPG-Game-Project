@@ -11,7 +11,7 @@ directly affects the ranking of ending.
 '''
 
 # Import constants
-from MPSystemConstants import *
+from SpiritSystem.MPSystemConstants import *
 
 class SpiritSystemClass():
     '''

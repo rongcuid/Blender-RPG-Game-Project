@@ -21,15 +21,16 @@ class Character:
     The meta class for character managing
     '''
     # List of characters using SN
-    CharacterList = None
+    CharacterList = {None:None}
     # List of character SNs using Name
-    SNList = None
+    SNList = {None:None}
 
     def __init__(self, name, SN, HP, SP, MP, baseAtk, 
                  baseDef, atkMulti, defMulti):
         '''
         Constructor, creates a character.
         @param name: The name of a character
+        @param SN: Serial number of a character
         @param HP: Maximum health point.
         @param SP: Maximum strength point.
         @param MP: Maximum spiritual point.
@@ -39,7 +40,10 @@ class Character:
         @param defMulti: Multiplication of defense of a particular
         weapon.
         ''' 
-        # TODO: Register to Character list
+        # Register to Character list
+        self.CharacterList.update({SN:self})
+        # Register Name
+        self.SNList.update({name:SN})
         # Convert type
         HP = int(HP)
         SP = float(SP)

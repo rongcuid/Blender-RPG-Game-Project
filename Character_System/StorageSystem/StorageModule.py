@@ -8,6 +8,7 @@ class StorageSystemClass():
     '''
     This class stores the SN of items a character carries
     '''
+    # TODO: Lock of equipped items
     # List of Items
     SNList = [None]
     def __init__(self):
